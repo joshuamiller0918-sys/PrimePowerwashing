@@ -12,39 +12,68 @@
       color: white;
     }
     header {
-      text-align: center;
-      padding: 30px;
       background: #111827;
+      padding: 20px;
+      text-align: center;
     }
-    h1 { margin: 0; }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header p {
+      margin: 5px 0 0;
+      color: #9ca3af;
+    }
     .hero {
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
+    }
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      color: #d1d5db;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .buttons {
+      margin-top: 20px;
     }
     .btn {
-      background: #22c55e;
+      display: inline-block;
+      margin: 8px;
       padding: 12px 20px;
       border-radius: 6px;
-      color: white;
       text-decoration: none;
-      display: inline-block;
-      margin-top: 15px;
+      color: white;
+      font-weight: bold;
     }
+    .call { background: #22c55e; }
+    .text { background: #3b82f6; }
+    .insta { background: #e1306c; }
     .section {
-      padding: 30px;
+      padding: 40px 20px;
       text-align: center;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
     }
     .card {
       background: #1f2937;
-      margin: 10px auto;
       padding: 20px;
       border-radius: 8px;
-      max-width: 300px;
+      width: 220px;
     }
     footer {
+      background: #111827;
       text-align: center;
       padding: 20px;
-      background: #111827;
+      color: #9ca3af;
     }
   </style>
 </head>
@@ -52,34 +81,48 @@
 
 <header>
   <h1>Prime Powerwashing</h1>
-  <p>Driveway & Exterior Cleaning</p>
+  <p>Driveway • Sidewalk • Patio Cleaning</p>
 </header>
 
 <div class="hero">
-  <h1>Make Your Driveway Look Brand New</h1>
-  <p>We provide professional pressure washing that removes dirt, oil stains, and grime fast. Affordable, reliable, and free estimates.</p>
-  <a href="tel:1234567890" class="btn">Call Now</a>
+  <h2>Make Your Driveway Look Brand New</h2>
+  <p>We remove dirt, oil stains, and grime using high-powered pressure washing. Fast, affordable, and reliable service with free estimates.</p>
+
+  <div class="buttons">
+    <a href="tel:3465548935" class="btn call">📞 Call Now</a>
+    <a href="sms:3465548935" class="btn text">💬 Text for Quote</a>
+    <a href="https://instagram.com/YOURUSERNAME" class="btn insta">📸 Instagram</a>
+  </div>
 </div>
 
 <div class="section">
   <h2>Our Services</h2>
-  <div class="card">Driveways</div>
-  <div class="card">Sidewalks</div>
-  <div class="card">Patios</div>
+  <div class="services">
+    <div class="card">Driveway Cleaning</div>
+    <div class="card">Sidewalk Washing</div>
+    <div class="card">Patio Cleaning</div>
+    <div class="card">Oil & Stain Removal</div>
+  </div>
 </div>
 
 <div class="section">
   <h2>Why Choose Us?</h2>
-  <p>✔ Fast Service<br>✔ Affordable Prices<br>✔ Reliable Team</p>
+  <p>
+    ✔ Fast Turnaround<br>
+    ✔ Affordable Pricing<br>
+    ✔ Reliable & Professional<br>
+    ✔ Free Estimates
+  </p>
 </div>
 
 <div class="section">
-  <h2>Contact</h2>
-  <p>Call or text: 123-456-7890</p>
+  <h2>Get a Free Quote</h2>
+  <p>Call or text us anytime:</p>
+  <p style="font-size:20px;"><b>346-554-8935</b></p>
 </div>
 
 <footer>
-  <p>© 2026 Prime Powerwashing</p>
+  <p>© 2026 Prime Powerwashing | Houston, TX</p>
 </footer>
 
 </body>
