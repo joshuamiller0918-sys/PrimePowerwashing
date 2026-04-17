@@ -1,45 +1,71 @@
 <div class="section">
   <h2>Before & After</h2>
-
-  <div class="slider">
-    <img src="before.jpg" class="before">
-    <img src="after.jpg" class="after" id="afterImage">
-    <input type="range" min="0" max="100" value="50" id="sliderRange">
+  <div class="compare-box">
+    <img src="before.jpg" alt="Before cleaning" class="compare-img">
+    <div class="after-wrap" id="afterWrap">
+      <img src="after.jpg" alt="After cleaning" class="compare-img">
+    </div>
+    <div class="divider" id="divider"></div>
   </div>
+  <input type="range" min="0" max="100" value="50" id="compareSlider">
 </div>
 
 <style>
-.slider {
+.compare-box {
   position: relative;
-  max-width: 500px;
-  margin: auto;
+  width: 90%;
+  max-width: 650px;
+  aspect-ratio: 4 / 3;
+  margin: 20px auto 10px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  background: rgba(255,255,255,0.08);
 }
 
-.slider img {
+.compare-img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  border-radius: 10px;
 }
 
-.after {
+.after-wrap {
   position: absolute;
   top: 0;
   left: 0;
-  clip-path: inset(0 50% 0 0);
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
 }
 
-#sliderRange {
-  width: 100%;
-  margin-top: 10px;
+.divider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: white;
+  box-shadow: 0 0 10px rgba(255,255,255,0.8);
+}
+
+#compareSlider {
+  width: 90%;
+  max-width: 650px;
+  display: block;
+  margin: 10px auto 0;
 }
 </style>
 
 <script>
-const slider = document.getElementById("sliderRange");
-const after = document.getElementById("afterImage");
+const compareSlider = document.getElementById("compareSlider");
+const afterWrap = document.getElementById("afterWrap");
+const divider = document.getElementById("divider");
 
-slider.addEventListener("input", function() {
-  let value = slider.value;
-  after.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
+compareSlider.addEventListener("input", function () {
+  const value = this.value + "%";
+  afterWrap.style.width = value;
+  divider.style.left = value;
 });
 </script>
