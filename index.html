@@ -4,58 +4,77 @@
   <meta charset="UTF-8">
   <title>Prime Powerwashing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b0f19;
       color: white;
+      background: linear-gradient(135deg, #0b0f19, #1e3a8a, #0ea5e9);
+      background-size: 400% 400%;
+      animation: gradient 10s ease infinite;
     }
+
+    @keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
     header {
-      background: #111827;
-      padding: 20px;
       text-align: center;
+      padding: 25px;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(8px);
     }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    header p {
-      margin: 5px 0 0;
-      color: #9ca3af;
-    }
+
     .hero {
       text-align: center;
       padding: 60px 20px;
     }
+
     .hero h2 {
       font-size: 32px;
-      margin-bottom: 10px;
     }
+
     .hero p {
-      color: #d1d5db;
       max-width: 500px;
-      margin: 0 auto;
+      margin: auto;
+      color: #e5e7eb;
     }
+
     .buttons {
-      margin-top: 20px;
+      margin-top: 25px;
     }
+
     .btn {
       display: inline-block;
-      margin: 8px;
-      padding: 12px 20px;
-      border-radius: 6px;
+      margin: 10px;
+      padding: 14px 22px;
+      border-radius: 8px;
       text-decoration: none;
       color: white;
       font-weight: bold;
+      transition: 0.2s;
     }
+
+    .btn:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
     .call { background: #22c55e; }
     .text { background: #3b82f6; }
     .insta { background: #e1306c; }
+
     .section {
       padding: 40px 20px;
       text-align: center;
+      background: rgba(0,0,0,0.3);
+      margin: 20px;
+      border-radius: 10px;
     }
+
     .services {
       display: flex;
       flex-wrap: wrap;
@@ -63,20 +82,22 @@
       gap: 15px;
       margin-top: 20px;
     }
+
     .card {
-      background: #1f2937;
+      background: rgba(255,255,255,0.1);
       padding: 20px;
-      border-radius: 8px;
+      border-radius: 10px;
       width: 220px;
     }
+
     footer {
-      background: #111827;
       text-align: center;
       padding: 20px;
-      color: #9ca3af;
+      opacity: 0.7;
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -91,7 +112,7 @@
   <div class="buttons">
     <a href="tel:3465548935" class="btn call">📞 Call Now</a>
     <a href="sms:3465548935" class="btn text">💬 Text for Quote</a>
-    <a href="https://instagram.com/YOURUSERNAME" class="btn insta">📸 Instagram</a>
+    <a href="https://instagram.com/htx.prime_powerwashing" class="btn insta">📸 Instagram</a>
   </div>
 </div>
 
